@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBox Home30 | Tu casa lista en 90 días</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #556B2F; /* Dark Olive Green */
+            --secondary-color: #DAA520; /* Gold */
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --text-color: #555;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            padding-top: 56px;
+            color: var(--text-color);
+        }
+        .hero {
+            position: relative;
+            background: url('https://placehold.co/1920x1080/556B2F/FFFFFF?text=EcoBox+Home30') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 180px 0;
+            text-align: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero .container {
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        section {
+            padding: 80px 0;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #333;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        .navbar {
+            background-color: rgba(33, 37, 41, 0.9) !important;
+            backdrop-filter: blur(5px);
+            transition: background-color 0.3s ease-in-out;
+        }
+        .navbar-brand {
+            font-weight: 700;
+        }
+        .nav-link {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: transform .3s ease, box-shadow .3s ease;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        /* Feature cards specific styles */
+        .feature-card .card-body i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+        .feature-card .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .feature-card .card-text {
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+        /* Dark section styles */
+        #caracteristicas {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        #caracteristicas h2 {
+            color: white;
+        }
+        #caracteristicas h2::after {
+            background-color: white;
+        }
+        #caracteristicas .card {
+            background-color: #343a40;
+            color: var(--light-color);
+        }
+        #caracteristicas .card .card-title {
+            color: white;
+        }
+        #caracteristicas .card .card-text {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        #caracteristicas .card-body i {
+            color: var(--primary-color);
+        }
+        .footer {
+            background-color: var(--dark-color);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0;
+        }
+        .footer h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: white;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .footer h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+        .footer a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: var(--primary-color);
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            transition: transform .2s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        .whatsapp-float .fa-whatsapp {
+            margin-top: 15px;
+        }
+        /* Custom Component Styles */
+        .bg-success {
+            background-color: var(--primary-color) !important;
+        }
+        .btn-success {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .btn-success:hover, .btn-success:focus {
+            background-color: #445625;
+            border-color: #445625;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: white;
+        }
+        .btn-outline-success {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-success:hover {
+            color: white;
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .accordion-button:not(.collapsed) {
+            color: white;
+            background-color: var(--primary-color);
+        }
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(85, 107, 47, 0.25);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EcoBox Viviendas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nuestras-ventajas">Ventajas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beneficios">Beneficios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modelos">Modelos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proceso">Proceso</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>EcoBox Home30</h1>
+            <p class="lead">Tu casa lista en 90 días. Compacta, cómoda, ampliable y con diseño.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Resumen del Proyecto -->
+        <section id="resumen-proyecto">
+            <div class="container">
+                <h2>Resumen Ejecutivo</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <p class="lead">El mercado argentino de viviendas modulares tipo contenedor se encuentra en una etapa de crecimiento sostenido, impulsado por la necesidad de soluciones rápidas, costos competitivos y una tendencia hacia la sustentabilidad.</p>
+                        <h5>Drivers Clave del Mercado:</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>Tiempos de Entrega Reducidos:</strong> 45–90 días vs. 8–14 meses de la obra tradicional.</li>
+                            <li><strong>Costo Competitivo:</strong> Aproximadamente USD 500–700/m².</li>
+                            <li><strong>Modularidad y Escalabilidad:</strong> Permite ampliaciones futuras sin obra húmeda.</li>
+                            <li><strong>Sustentabilidad:</strong> Uso de contenedores reciclados y menor huella de obra.</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2 class="mt-5 pt-5">Situación Actual</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <p>Somos una empresa líder en fabricación de contenedores de obra, con base en Neuquén y 80 empleados. Evaluando el fuerte crecimiento en la demanda habitacional, los altos precios de la construcción tradicional y la urgencia del mercado, se planteó la creación de una nueva línea productiva para módulos habitacionales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Análisis de Mercado -->
+        <section id="analisis-mercado" class="bg-light">
+            <div class="container">
+                <h2>Análisis de Mercado y FODA</h2>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="accordion" id="marketAnalysisAccordion">
+                            <!-- Estudio de Mercado -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingMarketStudy">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMarketStudy" aria-expanded="true" aria-controls="collapseMarketStudy">
+                                        <strong>1. Estudio de Mercado</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseMarketStudy" class="accordion-collapse collapse show" aria-labelledby="headingMarketStudy" data-bs-parent="#marketAnalysisAccordion">
+                                    <div class="accordion-body">
+                                        <h5>1.1.1 Demanda</h5>
+                                        <p>Según Verified Market Reports, el mercado de modular homes en Argentina estaría valuado en aproximadamente USD 340 millones en 2025, y proyectan que crezca a unos USD 610 millones para 2033, con una tasa compuesta anual (CAGR) de 6,8 %.</p>
+                                        <p>Infobae reporta que en Argentina hay más de 12.000 obras en ejecución bajo el sistema modular. Asumiendo que un 10% corresponde a contenedores, se puede estimar un mercado relevante de 1.200 obras modulares contenedor activas.</p>
+                                        <h5>1.1.2 Oferta y Proyección</h5>
+                                        <p>Con una demanda estimada inicial de ~1.200 unidades para 2025 y un crecimiento del 6,8% anual, en 5 años podría llegar a ~1.600-1.650 unidades nuevas por año.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FODA -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSwot">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSwot" aria-expanded="false" aria-controls="collapseSwot">
+                                        <strong>2. Análisis FODA</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseSwot" class="accordion-collapse collapse" aria-labelledby="headingSwot" data-bs-parent="#marketAnalysisAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5>Fortalezas</h5>
+                                                <ul>
+                                                    <li>Empresa líder y Knowhow adquirido.</li>
+                                                    <li>Proceso productivo industrializado con tiempos predecibles.</li>
+                                                    <li>Precio competitivo por m².</li>
+                                                    <li>Modularidad que permite escalar unidades.</li>
+                                                    <li>Transporte especializado propio.</li>
+                                                </ul>
+                                                <h5>Debilidades</h5>
+                                                <ul>
+                                                    <li>Falta de fidelidad al nuevo producto.</li>
+                                                    <li>Paradigmas sociales sobre viviendas alternativas.</li>
+                                                    <li>Dependencia de insumos dolarizados.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5>Oportunidades</h5>
+                                                <ul>
+                                                    <li>Alta demanda habitacional insatisfecha.</li>
+                                                    <li>Aumento de loteos suburbanos y precios altos en alquileres.</li>
+                                                    <li>Mercado con baja estandarización → oportunidad para liderazgo.</li>
+                                                    <li>Acuerdos de exclusividad con empresas petroleras.</li>
+                                                </ul>
+                                                <h5>Amenazas</h5>
+                                                <ul>
+                                                    <li>Competencia creciente de prefabricados importados.</li>
+                                                    <li>Normativa no homogénea entre municipios.</li>
+                                                    <li>Costos logísticos elevados en zonas limítrofes.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuevas Ventajas Section -->
+        <section id="nuestras-ventajas" class="section">
+            <div class="container">
+                <h2 class="text-center mb-5">Nuestras Ventajas Clave</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-chair"></i>
+                                <h5 class="card-title">DISEÑOS PERSONALIZADOS</h5>
+                                <p class="card-text">Crea y diseña tu espacio, en EcoBox, te asesoramos para que crees tu propio espacio y visualices tu proyecto final, teniendo la posibilidad de ejecutar tu proyecto por etapas y con la posibilidad de seguir habitando el mismo, estando aún en obra.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-key"></i>
+                                <h5 class="card-title">MODALIDAD LLAVE EN MANO</h5>
+                                <p class="card-text">Trabajamos bajo la modalidad llave en mano, para que tu única preocupación sea el día de inauguración de tu espacio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-desktop"></i>
+                                <h5 class="card-title">ALTÍSIMA CALIDAD</h5>
+                                <p class="card-text">Nuestros EcoBox, están construidos y equipados con materiales de excelentísima calidad, los cuales puedes comprobar en nuestro Show Room.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-stopwatch"></i>
+                                <h5 class="card-title">TIEMPO DE ENTREGA</h5>
+                                <p class="card-text">Tenemos un tiempo de entrega de 90 días para nuestra línea premium, y dependiendo de qué proyecto desees, tanto en diseño como cantidad de box, será el tiempo de entrega.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-wrench"></i>
+                                <h5 class="card-title">MANTENIMIENTO MÍNIMO</h5>
+                                <p class="card-text">Esta forma constructiva, tiene dentro de sus beneficios, el bajísimo costo de mantenimiento, el cual deriva de los tipos de materiales utilizados y la compacta estructura que lo forma.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-award"></i>
+                                <h5 class="card-title">DURABILIDAD</h5>
+                                <p class="card-text">Respecto a la durabilidad estamos hablando de estructuras metálicas, de alta resistencia que son adaptables a cualquier tipo de situación climática.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Producto -->
+        <section id="producto">
+            <div class="container">
+                <h2>Nuestro Producto: EcoBox Home30</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="https://placehold.co/600x400/8FBC8F/FFFFFF?text=EcoBox+Home30+Exterior" class="img-fluid rounded shadow mb-3" alt="EcoBox Home30">
+                    </div>
+                    <div class="col-md-6">
+                        <p class="lead">Presentamos <strong>EcoBox Home30</strong>, una casa contenedor de 30 m² "llave en mano", diseñada para uso residencial. Construida sobre un contenedor marítimo reacondicionado, ofrece una solución habitacional moderna, sostenible y de rápida instalación.</p>
+                        <h5>Usos Previstos:</h5>
+                        <ul>
+                            <li><strong>Primera vivienda económica:</strong> Ideal para parejas jóvenes o familias pequeñas.</li>
+                            <li><strong>Segunda vivienda:</strong> Perfecta como casa de fin de semana o para instalar en el lote familiar.</li>
+                            <li><strong>Espacios complementarios:</strong> Funciona como home office, estudio, consultorio o quincho.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section id="beneficios" class="bg-light">
+            <div class="container">
+                <h2>Beneficios Clave</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-center p-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Rapidez</h5>
+                                <p class="card-text">Tiempos de entrega muy inferiores a la obra tradicional. Tu casa lista en 90 días.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-center p-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Precio Cerrado</h5>
+                                <p class="card-text">Olvídate de sorpresas. Ofrecemos un precio cerrado y previsible desde el inicio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-center p-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Ampliable</h5>
+                                <p class="card-text">Puedes empezar con un módulo y ampliar tu casa en etapas futuras según tus necesidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-center p-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Diseño y Confort</h5>
+                                <p class="card-text">Diseño interior moderno con excelente aislación térmica y acústica para tu comodidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-center p-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Sustentable</h5>
+                                <p class="card-text">Reutilizamos contenedores marítimos en desuso, reduciendo el impacto ambiental y promoviendo la economía circular.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-center p-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Transportable</h5>
+                                <p class="card-text">Si en el futuro decides mudarte, tu casa puede mudarse contigo. Una inversión que te acompaña.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Características Principales -->
+        <section id="caracteristicas">
+            <div class="container">
+                <h2>Ventajas de la Construcción Modular</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="fas fa-clock fa-3x mb-3"></i>
+                                <h5 class="card-title">CONSTRUCCION RAPIDA</h5>
+                                <p class="card-text small">Reducción significativa del tiempo de construcción comparado con las casas tradicionales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="fas fa-check-circle fa-3x mb-3"></i>
+                                <h5 class="card-title">CALIDAD CONTROLADA</h5>
+                                <p class="card-text small">Entorno de fabricación controlado que asegura alta precisión y un riguroso control de calidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="fas fa-hand-holding-usd fa-3x mb-3"></i>
+                                <h5 class="card-title">AHORRO DE COSTOS</h5>
+                                <p class="card-text small">Optimización de materiales y reducción de desperdicios.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="fas fa-truck-moving fa-3x mb-3"></i>
+                                <h5 class="card-title">TRASLADABLES</h5>
+                                <p class="card-text small">Se fabrican en taller y se trasladan terminadas a cualquier sitio del país.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="fas fa-leaf fa-3x mb-3"></i>
+                                <h5 class="card-title">SOSTENIBILIDAD</h5>
+                                <p class="card-text small">Diseño energéticamente eficiente y materiales que minimizan el impacto ambiental.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="fas fa-calendar-check fa-3x mb-3"></i>
+                                <h5 class="card-title">ENTREGA PACTADA</h5>
+                                <p class="card-text small">Mayor previsibilidad en los plazos de entrega y costos, evitando sorpresas y sobrecostos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="fas fa-shield-alt fa-3x mb-3"></i>
+                                <h5 class="card-title">DURABILIDAD</h5>
+                                <p class="card-text small">Estructuras diseñadas para soportar condiciones climáticas adversas y el uso habitual.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card text-center h-100">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <i class="fas fa-lightbulb fa-3x mb-3"></i>
+                                <h5 class="card-title">DISEÑO FLEXIBLE</h5>
+                                <p class="card-text small">Posibilidad de personalización según las necesidades y preferencias del cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Para Quién -->
+        <section id="para-quien">
+            <div class="container">
+                <h2>Una Solución Para Cada Necesidad</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Parejas y Familias Jóvenes</h5>
+                                <p class="card-text">La opción ideal para acceder a la primera vivienda en un lote propio, con la flexibilidad de ampliarla en el futuro.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Segunda Vivienda</h5>
+                                <p class="card-text">Perfecta para escapadas de fin de semana en el campo, la sierra o la costa. Rapidez, diseño y confort.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Profesionales Independientes</h5>
+                                <p class="card-text">Un espacio separado para tu consultorio, estudio u oficina en casa, diferenciando el trabajo del hogar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modelos -->
+        <section id="modelos" class="bg-light">
+            <div class="container">
+                <h2>Nuestros Modelos</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div id="carouselHome30" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://placehold.co/600x400/8FBC8F/FFFFFF?text=EcoBox+Home30+Exterior" class="d-block w-100" alt="Vista exterior del modelo Home30">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://placehold.co/600x400/A9A9A9/FFFFFF?text=EcoBox+Home30+Interior" class="d-block w-100" alt="Vista interior del modelo Home30">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://placehold.co/600x400/C1E1C1/FFFFFF?text=EcoBox+Home30+Plano" class="d-block w-100" alt="Plano del modelo Home30">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome30" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselHome30" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">EcoBox Home30</h5>
+                                <div class="d-flex justify-content-around my-3 text-secondary border-top border-bottom py-2">
+                                    <span title="Superficie"><i class="fas fa-ruler-combined me-2"></i>30m²</span>
+                                    <span title="Ambientes"><i class="fas fa-door-open me-2"></i>2 Amb</span>
+                                    <span title="Baños"><i class="fas fa-bath me-2"></i>1 Baño</span>
+                                </div>
+                                <p class="card-text">Nuestra solución ideal para parejas, como primera vivienda o espacio de trabajo. Eficiente, rápido y con un diseño impecable.</p>
+                                <a href="#especificaciones" class="btn btn-outline-success mt-auto">Ver Especificaciones</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div id="carouselHome60" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://placehold.co/600x400/556B2F/FFFFFF?text=EcoBox+Home60+Exterior" class="d-block w-100" alt="Vista exterior del modelo Home60">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://placehold.co/600x400/778899/FFFFFF?text=EcoBox+Home60+Interior" class="d-block w-100" alt="Vista interior del modelo Home60">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome60" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselHome60" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">EcoBox Home60 (Próximamente)</h5>
+                                <div class="d-flex justify-content-around my-3 text-secondary border-top border-bottom py-2">
+                                    <span title="Superficie"><i class="fas fa-ruler-combined me-2"></i>60m²</span>
+                                    <span title="Ambientes"><i class="fas fa-door-open me-2"></i>3 Amb</span>
+                                    <span title="Baños"><i class="fas fa-bath me-2"></i>1 Baño</span>
+                                </div>
+                                <p class="card-text">El doble de espacio, el doble de posibilidades. Un modelo con dos dormitorios, perfecto para familias o para quienes buscan mayor amplitud.</p>
+                                <a href="#contacto" class="btn btn-success mt-auto">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Especificaciones Técnicas -->
+        <section id="especificaciones">
+            <div class="container">
+                <h2>Especificaciones Técnicas</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <p class="lead text-center">Nuestro modelo EcoBox Home30 "llave en mano" está diseñado con materiales de alta calidad para garantizar confort y durabilidad. El precio base incluye:</p>
+                        <div class="accordion" id="accordionSpecs">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingProductDef">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProductDef" aria-expanded="false" aria-controls="collapseProductDef">
+                                        <strong>Definición del Producto – “Container Living 30”</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseProductDef" class="accordion-collapse collapse" aria-labelledby="headingProductDef" data-bs-parent="#accordionSpecs">
+                                    <div class="accordion-body">
+                                        <h5>Concepto</h5>
+                                        <p>Unidad modular habitacional de 30 m², basada en contenedor reciclado de 40 pies, totalmente acondicionada para uso residencial o turístico. Diseñada bajo estándares de eficiencia térmica y estética minimalista.</p>
+                                        <h5>Características técnicas</h5>
+                                        <ul>
+                                            <li><strong>Superficie:</strong> 30 m².</li>
+                                            <li><strong>Estructura:</strong> contenedor marítimo 40 ft grado A reacondicionado.</li>
+                                            <li><strong>Aislamiento:</strong> paneles aislantes PIR o lana mineral + barrera de vapor.</li>
+                                            <li><strong>Terminación exterior:</strong> revestimiento tipo siding o chapa prepintada.</li>
+                                            <li><strong>Instalaciones:</strong> eléctrica completa, agua fría/caliente, desagües, preinstalación de A/A.</li>
+                                            <li><strong>Ambientes:</strong> cocina integrada, estar-comedor, dormitorio separado, baño completo.</li>
+                                            <li><strong>Ventanas:</strong> DVH.</li>
+                                            <li><strong>Vida útil estimada:</strong> +25 años.</li>
+                                        </ul>
+                                        <h5>Propuesta de valor</h5>
+                                        <p>“Vivienda modular accesible, sustentable y lista en 60 días, con desempeño térmico superior y estética moderna”.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <strong>Estructura y Exterior</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionSpecs">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Contenedor marítimo High Cube de 40 pies, reacondicionado y reforzado estructuralmente.</li>
+                                            <li>Aislación térmica y acústica de alta densidad en paredes, techo y piso.</li>
+                                            <li>Revestimiento exterior con tratamiento anticorrosivo y pintura de terminación.</li>
+                                            <li>Aberturas de aluminio de alta prestación con vidrio DVH (Doble Vidriado Hermético).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <strong>Interior y Terminaciones</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionSpecs">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Revestimiento interior de paredes y techo en madera o placa de yeso (a elección).</li>
+                                            <li>Pisos flotantes de alto tránsito in estar/dormitorio.</li>
+                                            <li>Pisos de cerámico o porcelanato en baño y cocina.</li>
+                                            <li>Pintura interior completa con colores a elección.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <strong>Instalaciones y Equipamiento</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionSpecs">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Instalación eléctrica completa with tablero, disyuntor, térmicas y bocas para luces y tomas.</li>
+                                            <li>Instalación sanitaria completa para agua fría/caliente y desagües.</li>
+                                            <li><strong>Baño completo:</strong> inodoro, bidet o ducha higiénica, vanitory y ducha con grifería.</li>
+                                            <li><strong>Kitchenette:</strong> mesada, bacha de acero inoxidable, grifería monocomando y espacio para anafe y heladera.</li>
+                                            <li>Conexiones preparadas para servicios externos (luz, agua, cloaca).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <strong>Opcionales y Upgrades</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionSpecs">
+                                    <div class="accordion-body">
+                                        <p>Eleva la experiencia de tu EcoBox with nuestros adicionales:</p>
+                                        <ul>
+                                            <li>Deck de madera exterior.</li>
+                                            <li>Pérgolas y galerías.</li>
+                                            <li>Mejores terminaciones en pisos y revestimientos.</li>
+                                            <li>Paneles solares para autonomía energética.</li>
+                                            <li>Sistemas de aire acondicionado frío/calor.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan de Negocio -->
+        <section id="plan-negocio" class="bg-light">
+            <div class="container">
+                <h2>Plan de Negocio</h2>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="accordion" id="businessPlanAccordion">
+                            <!-- Marketing Mix (4P) -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingMarketing">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMarketing" aria-expanded="true" aria-controls="collapseMarketing">
+                                        <strong>4. Marketing Mix (4P)</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseMarketing" class="accordion-collapse collapse show" aria-labelledby="headingMarketing" data-bs-parent="#businessPlanAccordion">
+                                    <div class="accordion-body">
+                                        <h5>4.1 Producto</h5>
+                                        <ul>
+                                            <li>Línea estándar: “Container Living 30”.</li>
+                                            <li>Servicios asociados: instalación, fundaciones, trámites municipales, transporte, garantía de 3 años.</li>
+                                        </ul>
+                                        <h5>4.2 Precio</h5>
+                                        <ul>
+                                            <li><strong>Estrategia:</strong> penetración selectiva orientada a capturar volumen con un precio competitivo pero con margen adecuado.</li>
+                                            <li><strong>Costo técnico estimado:</strong> USD 18.000–20.000.</li>
+                                            <li><strong>Precio de venta sugerido:</strong> USD 28.000 (margen bruto ~35%).</li>
+                                            <li><strong>Modelo Premium:</strong> USD 35.000.</li>
+                                            <li><strong>Financiamiento:</strong> 30% anticipo + 70% en hitos. Alianzas con fintech para cuotas en pesos ajustadas mensualmente.</li>
+                                        </ul>
+                                        <h5>4.3 Plaza (Distribución)</h5>
+                                        <ul>
+                                            <li>Venta directa (principal).</li>
+                                            <li>Red de representantes en zonas turísticas.</li>
+                                            <li>Alianzas con desarrollos inmobiliarios suburbanos.</li>
+                                            <li>Presencia en marketplaces para modelos estándar.</li>
+                                        </ul>
+                                        <h5>4.4 Promoción</h5>
+                                        <ul>
+                                            <li><strong>Ejes de comunicación:</strong> Rapidez (“Listo para habitar en 60 días”), Sustentabilidad, Modularidad (“Tu casa crece con vos”), Seguridad.</li>
+                                            <li><strong>Canales:</strong> Campañas digitales (Meta, Google), Visitas a planta y showroom, Ferias de construcción y turismo, Influencers.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Proyección de Ventas -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSales">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSales" aria-expanded="false" aria-controls="collapseSales">
+                                        <strong>5. Proyección de Ventas a 5 años</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseSales" class="accordion-collapse collapse" aria-labelledby="headingSales" data-bs-parent="#businessPlanAccordion">
+                                    <div class="accordion-body">
+                                        <h6>Supuestos:</h6>
+                                        <ul>
+                                            <li>Crecimiento anual de mercado: 15%.</li>
+                                            <li>Participación objetivo: 0,1% en año 1 → 0,4% en año 5.</li>
+                                            <li>Capacidad productiva inicial: 10 unidades/mes (120/año).</li>
+                                            <li>Se venden modelos estándar (70%) y premium (30%).</li>
+                                        </ul>
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr><th>Año</th><th>Unidades</th><th>Precio promedio</th><th>Ingresos estimados</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>1</td><td>60</td><td>USD 29.500</td><td>USD 1.77 M</td></tr>
+                                                <tr><td>2</td><td>90</td><td>USD 30.000</td><td>USD 2.70 M</td></tr>
+                                                <tr><td>3</td><td>140</td><td>USD 30.500</td><td>USD 4.27 M</td></tr>
+                                                <tr><td>4</td><td>180</td><td>USD 31.000</td><td>USD 5.58 M</td></tr>
+                                                <tr><td>5</td><td>220</td><td>USD 31.500</td><td>USD 6.93 M</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Rentabilidad -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingProfitability">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProfitability" aria-expanded="false" aria-controls="collapseProfitability">
+                                        <strong>6. Rentabilidad Proyectada</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseProfitability" class="accordion-collapse collapse" aria-labelledby="headingProfitability" data-bs-parent="#businessPlanAccordion">
+                                    <div class="accordion-body">
+                                        <h5>Costos estimados por unidad</h5>
+                                        <ul>
+                                            <li>Materiales y mano de obra: USD 18.000</li>
+                                            <li>Transporte e instalación promedio: USD 1.500</li>
+                                            <li>Gastos comerciales: USD 800</li>
+                                            <li><strong>Costo total promedio: USD 20.300</strong></li>
+                                        </ul>
+                                        <h5>Margen</h5>
+                                        <ul>
+                                            <li>Precio promedio: USD 29.500</li>
+                                            <li>Margen bruto por unidad: USD 9.200</li>
+                                            <li><strong>Margen bruto anual (Año 1): USD 552.000</strong></li>
+                                            <li><strong>Margen bruto anual (Año 5): USD 2.02 M</strong></li>
+                                        </ul>
+                                        <h5>Punto de equilibrio</h5>
+                                        <p>Con costos fijos estimados de USD 300.000/año, el punto de equilibrio es de <strong>33 unidades anuales</strong>, objetivo alcanzado desde el mes 7 del año 1.</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Campaña de Lanzamiento y Distribución -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingLaunch">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLaunch" aria-expanded="false" aria-controls="collapseLaunch">
+                                        <strong>7 & 8. Campaña de Lanzamiento y Distribución</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseLaunch" class="accordion-collapse collapse" aria-labelledby="headingLaunch" data-bs-parent="#businessPlanAccordion">
+                                    <div class="accordion-body">
+                                        <h5>Campaña de Lanzamiento</h5>
+                                        <ul>
+                                            <li><strong>Concepto creativo:</strong> “Viví modular. Viví hoy.”</li>
+                                            <li><strong>Piezas:</strong> Video 45’’, simulador web, render 360°, testimonios.</li>
+                                            <li><strong>KPIs:</strong> Costo por lead objetivo: USD 5–7; Tasa de conversión final: 2–3%.</li>
+                                        </ul>
+                                        <h5>Canal de Distribución</h5>
+                                        <ul>
+                                            <li><strong>Estrategia:</strong> Modelo híbrido con fuerte control de calidad y relación directa con el cliente.</li>
+                                            <li><strong>Canales clave:</strong> Venta directa, representantes regionales, alianzas B2B, e-commerce, showroom móvil.</li>
+                                            <li><strong>Logística:</strong> Transporte con camiones de cama baja, montaje con hidrogrúa, instalación rápida en 24–48 h.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="faq">
+            <div class="container">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                ¿En cuánto tiempo puedo tener mi casa?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Nuestro proceso de fabricación y entrega para el modelo EcoBox Home30 es de aproximadamente <strong>90 días</strong> desde la firma del contrato. Este plazo nos permite garantizar la máxima calidad en cada etapa.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                ¿Se puede instalar en cualquier terreno?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, en la mayoría de los casos. Realizamos un estudio de factibilidad previo para asegurar que el acceso para el camión y la grúa sea adecuado. El terreno debe estar nivelado y contar con las acometidas de servicios (agua, luz, desagüe) preparadas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                ¿Qué necesito preparar en el terreno?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                El cliente debe encargarse de las bases donde se apoyará el módulo (pueden ser pilotes, platea de hormigón, etc.) y de llevar los servicios hasta el punto de instalación. Nosotros te proveemos los planos y el asesoramiento necesario para estas tareas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                ¿Las casas son aptas para climas extremos?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutamente. Nuestras unidades cuentan con una excelente aislación térmica y acústica en muros, piso y techo. Además, las aberturas con Doble Vidriado Hermético (DVH) contribuyen a mantener una temperatura interior confortable durante todo el año, reduciendo el consumo energético.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                ¿Qué formas de pago ofrecen?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Nuestro plan de pagos estándar es: 40% de anticipo al firmar el contrato para iniciar la producción, un pago intermedio durante la construcción, y el saldo restante contra entrega de la unidad en tu terreno.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ================================================================================= -->
+    <!-- START REFERENCE CONTENT                                                           -->
+    <!-- ================================================================================= -->
+
+    <hr class="my-5 border-info border-5">
+
+    <!-- CONTENT FROM: Servicios – Mi Casa Containers.html -->
+    <div class="container my-5">
+        
+        <!-- Diseño y Calidad -->
+        <section id="ref3-diseno">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Diseño y Calidad</h2>
+                </div>
+                <div class="col-md-6">
+                    <p>Realizamos diferentes tipos de configuraciones para nuestros módulos habitacionales: 30m<sup>2</sup> en 2 ambientes, 60m<sup>2</sup> en 3 ambientes, 90m<sup>2</sup> en 4 ambientes y 120m<sup>2</sup> en 5 ambientes. Todos en versiones <strong>ESTÁNDAR</strong> y <strong>PREMIUM.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estándar vs Premium -->
+        <section id="ref3-premium" class="bg-light">
+            <div class="text-center">
+                <h2>Estándar VS. Premium</h2>
+                <p class="lead">Contamos con muchas opciones para darle ese toque elegante a tu proyecto de vivienda. Trabajamos con materiales sintéticos o naturales que vamos adecuando de acuerdo a sus posibilidades.</p>
+            </div>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/Interior-home-1.png" class="card-img-top" alt="Interior Entablonado">
+                        <div class="card-body">
+                            <h5 class="card-title">INTERIOR ENTABLONADO</h5>
+                            <p class="card-text">Posibilidad de optar entre materiales reales o sintéticos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/Interior-home-2.png" class="card-img-top" alt="Interior Durlock">
+                        <div class="card-body">
+                            <h5 class="card-title">INTERIOR EN DURLOCK PINTADO</h5>
+                            <p class="card-text">Resaltá la elegancia de tu proyecto, eligiendo los colores que mejor se adapten a tu espacio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/Interior-home-3.png" class="card-img-top" alt="Aberturas">
+                        <div class="card-body">
+                            <h5 class="card-title">ABERTURAS DE PRIMERA CALIDAD</h5>
+                            <p class="card-text">Estándar: Modena blanco. Premium: Modena 2 con DVH en color negro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Módulos de Viviendas -->
+        <section id="ref3-viviendas">
+            <h2 class="text-center">...:: VIVIENDAS</h2>
+
+            <!-- Vivienda 30m -->
+            <div class="row align-items-center my-5">
+                <div class="col-md-6">
+                    <h3>Vivienda - 30 METROS (2 ambientes)</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check"></i> Dormitorio.</li>
+                        <li><i class="fas fa-check"></i> Baño Completo.</li>
+                        <li><i class="fas fa-check"></i> Living.</li>
+                        <li><i class="fas fa-check"></i> Cocina / Comedor.</li>
+                    </ul>
+                    <small>*Adicional pérgola con deck.</small>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/render-30mt-marca-1280x853-1-768x512.png" class="img-fluid rounded shadow">
+                </div>
+            </div>
+
+            <!-- Vivienda 60m -->
+            <div class="row align-items-center my-5 bg-light py-4 rounded">
+                <div class="col-md-6">
+                     <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/render-60mt-marca-1280x853-1-768x512.png" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h3>Vivienda 2 - 60 METROS (3 ambientes)</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check"></i> 2 Dormitorios.</li>
+                        <li><i class="fas fa-check"></i> Baño Completo.</li>
+                        <li><i class="fas fa-check"></i> Living.</li>
+                        <li><i class="fas fa-check"></i> Cocina.</li>
+                        <li><i class="fas fa-check"></i> Comedor.</li>
+                        <li><i class="fas fa-check"></i> Lavadero.</li>
+                    </ul>
+                    <small>*Adicional pérgola con deck.</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntas Frecuentes -->
+        <section id="ref3-faq">
+            <h2 class="text-center">Preguntas Frecuentes</h2>
+            <div class="accordion" id="ref3FaqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ref3-q1">
+                            ¿Qué necesito para tener mi vivienda modular?
+                        </button>
+                    </h2>
+                    <div id="ref3-q1" class="accordion-collapse collapse" data-bs-parent="#ref3FaqAccordion">
+                        <div class="accordion-body">
+                            Es necesario contar con un terreno o lote donde colocar la vivienda. De no contar con uno, contamos con opciones inmobiliarias.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ref3-q2">
+                            ¿Qué otros gastos tengo?
+                        </button>
+                    </h2>
+                    <div id="ref3-q2" class="accordion-collapse collapse" data-bs-parent="#ref3FaqAccordion">
+                        <div class="accordion-body">
+                            Bases de apoyo, transporte, gastos de flete, grúa y montaje e instalación sanitaria y eléctrica corren por cuenta del cliente.
+                        </div>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ref3-q3">
+                            ¿Cúal es la forma de pago?
+                        </button>
+                    </h2>
+                    <div id="ref3-q3" class="accordion-collapse collapse" data-bs-parent="#ref3FaqAccordion">
+                        <div class="accordion-body">
+                            Un adelanto del 50% y el saldo pendiente a contra entrega.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <!-- ================================================================================= -->
+    <!-- END REFERENCE CONTENT                                                             -->
+    <!-- ================================================================================= -->
+
+    <!-- Contacto / Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container text-center">
+            <h2>Contáctanos</h2>
+            <p>¿Interesado en una EcoBox Home30? ¡Hablemos!</p>
+            <p><strong>Email:</strong> info@ecoboxviviendas.com</p>
+            <p><strong>Teléfono:</strong> +54 9 11 1234-5678</p>
+            <p>Síguenos en nuestras redes sociales.</p>
+            <div class="mb-3">
+                <a href="#" class="text-white me-3" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-white me-3" title="Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+            <p class="mt-4"><small>Copyright © 2024 EcoBox Viviendas</small></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola!%20Estoy%20interesado%20en%20las%20viviendas%20EcoBox." class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

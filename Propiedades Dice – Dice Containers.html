@@ -12,186 +12,186 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesomeeeeee -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>      
-        :root {
-            --primary-color: #556B2F; /* Dark Olive Green */
-            --secondary-color: #DAA520; /* Gold */
-            --dark-color: #212529;
-            --light-color: #f8f9fa;
-            --text-color: #555;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            padding-top: 56px;
-            color: var(--text-color);
-        }
-        .hero {
-            position: relative;
-            background: url('https://placehold.co/1920x1080/556B2F/FFFFFF?text=EcoBox+Home30') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 180px 0;
-            text-align: center;
-        } 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .hero .container {
-            position: relative;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-        }
-        section {
-            padding: 80px 0;
-        }
-        section h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-weight: 700;
-            font-size: 2.5rem;
-            color: #333;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-        .navbar {
-            background-color: rgba(33, 37, 41, 0.9) !important;
-            backdrop-filter: blur(5px);
-            transition: background-color 0.3s ease-in-out;
-        }
-        .navbar-brand {
-            font-weight: 700;
-        }
-        .nav-link {
-            font-weight: 400;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-        }
-        .card {
-            border: none;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            transition: transform .3s ease, box-shadow .3s ease;
-            height: 100%;
-            border-radius: 8px;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-        }
-        /* Feature cards specific styles */
-        .feature-card .card-body i {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 25px;
-        }
-        .feature-card .card-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 15px;
-        }
-        .feature-card .card-text {
-            font-size: 0.9rem;
-            color: var(--text-color);
-        }
-        /* Dark section styles */
-        #caracteristicas {
-            background-color: var(--dark-color);
-            color: white;
-        }
-        #caracteristicas h2 {
-            color: white;
-        }
-        #caracteristicas h2::after {
-            background-color: white;
-        }
-        #caracteristicas .card {
-            background-color: #343a40;
-            color: var(--light-color);
-        }
-        #caracteristicas .card .card-title {
-            color: white;
-        }
-        #caracteristicas .card .card-text {
-            color: rgba(255, 255, 255, 0.7);
-        }
-        #caracteristicas .card-body i {
-            color: var(--primary-color);
-        }
-        .footer {
-            background-color: var(--dark-color);
-            color: rgba(255, 255, 255, 0.7);
-            padding: 60px 0;
-        }
-        .footer h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-weight: 700;
-            font-size: 2.5rem;
-            color: white;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        .footer h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-        .footer p {
-            margin-bottom: 0.5rem;
-        }
-        .footer a {
-            color: white;
-            transition: color 0.3s ease;
-        }
-        .footer a:hover {
-            color: var(--primary-color);
-        }
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            transition: transform .2s;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            color: white;
-        }
-        .whatsapp-float .fa-whatsapp {
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EcoBox Viviendas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nuestras-ventajas">Ventajas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beneficios">Beneficios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modelos">Modelos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proceso">Proceso</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>EcoBox Home30</h1>
+            <p class="lead">Tu casa lista en 90 días. Compacta, cómoda, ampliable y con diseño.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Resumen del Proyecto -->
+        <section id="resumen-proyecto">
+            <div class="container">
+                <h2>Resumen Ejecutivo</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <p class="lead">El mercado argentino de viviendas modulares tipo contenedor se encuentra en una etapa de crecimiento sostenido, impulsado por la necesidad de soluciones rápidas, costos competitivos y una tendencia hacia la sustentabilidad.</p>
+                        <h5>Drivers Clave del Mercado:</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>Tiempos de Entrega Reducidos:</strong> 45–90 días vs. 8–14 meses de la obra tradicional.</li>
+                            <li><strong>Costo Competitivo:</strong> Aproximadamente USD 500–700/m².</li>
+                            <li><strong>Modularidad y Escalabilidad:</strong> Permite ampliaciones futuras sin obra húmeda.</li>
+                            <li><strong>Sustentabilidad:</strong> Uso de contenedores reciclados y menor huella de obra.</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2 class="mt-5 pt-5">Situación Actual</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <p>Somos una empresa líder en fabricación de contenedores de obra, con base en Neuquén y 80 empleados. Evaluando el fuerte crecimiento en la demanda habitacional, los altos precios de la construcción tradicional y la urgencia del mercado, se planteó la creación de una nueva línea productiva para módulos habitacionales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Análisis de Mercado -->
+        <section id="analisis-mercado" class="bg-light">
+            <div class="container">
+                <h2>Análisis de Mercado y FODA</h2>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="accordion" id="marketAnalysisAccordion">
+                            <!-- Estudio de Mercado -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingMarketStudy">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMarketStudy" aria-expanded="true" aria-controls="collapseMarketStudy">
+                                        <strong>1. Estudio de Mercado</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseMarketStudy" class="accordion-collapse collapse show" aria-labelledby="headingMarketStudy" data-bs-parent="#marketAnalysisAccordion">
+                                    <div class="accordion-body">
+                                        <h5>1.1.1 Demanda</h5>
+                                        <p>Según Verified Market Reports, el mercado de modular homes en Argentina estaría valuado en aproximadamente USD 340 millones en 2025, y proyectan que crezca a unos USD 610 millones para 2033, con una tasa compuesta anual (CAGR) de 6,8 %.</p>
+                                        <p>Infobae reporta que en Argentina hay más de 12.000 obras en ejecución bajo el sistema modular. Asumiendo que un 10% corresponde a contenedores, se puede estimar un mercado relevante de 1.200 obras modulares contenedor activas.</p>
+                                        <h5>1.1.2 Oferta y Proyección</h5>
+                                        <p>Con una demanda estimada inicial de ~1.200 unidades para 2025 y un crecimiento del 6,8% anual, en 5 años podría llegar a ~1.600-1.650 unidades nuevas por año.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FODA -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSwot">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSwot" aria-expanded="false" aria-controls="collapseSwot">
+                                        <strong>2. Análisis FODA</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseSwot" class="accordion-collapse collapse" aria-labelledby="headingSwot" data-bs-parent="#marketAnalysisAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5>Fortalezas</h5>
+                                                <ul>
+                                                    <li>Empresa líder y Knowhow adquirido.</li>
+                                                    <li>Proceso productivo industrializado con tiempos predecibles.</li>
+                                                    <li>Precio competitivo por m².</li>
+                                                    <li>Modularidad que permite escalar unidades.</li>
+                                                    <li>Transporte especializado propio.</li>
+                                                </ul>
+                                                <h5>Debilidades</h5>
+                                                <ul>
+                                                    <li>Falta de fidelidad al nuevo producto.</li>
+                                                    <li>Paradigmas sociales sobre viviendas alternativas.</li>
+                                                    <li>Dependencia de insumos dolarizados.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5>Oportunidades</h5>
+                                                <ul>
+                                                    <li>Alta demanda habitacional insatisfecha.</li>
+                                                    <li>Aumento de loteos suburbanos y precios altos en alquileres.</li>
+                                                    <li>Mercado con baja estandarización → oportunidad para liderazgo.</li>
+                                                    <li>Acuerdos de exclusividad con empresas petroleras.</li>
+                                                </ul>
+                                                <h5>Amenazas</h5>
+                                                <ul>
+                                                    <li>Competencia creciente de prefabricados importados.</li>
+                                                    <li>Normativa no homogénea entre municipios.</li>
+                                                    <li>Costos logísticos elevados en zonas limítrofes.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuevas Ventajas Section -->
+        <section id="nuestras-ventajas" class="section">
+            <div class="container">
+                <h2 class="text-center mb-5">Nuestras Ventajas Clave</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-chair"></i>
+                                <h5 class="card-title">DISEÑOS PERSONALIZADOS</h5>
+                                <p class="card-text">Crea y diseña tu espacio, en EcoBox, te asesoramos para que crees tu propio espacio y visualices tu proyecto final, teniendo la posibilidad de ejecutar tu proyecto por etapas y con la posibilidad de seguir habitando el mismo, estando aún en obra.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-key"></i>
+                                <h5 class="card-title">MODALIDAD LLAVE EN MANO</h5>
+                                <p class="card-text">Trabajamos bajo la modalidad llave en mano, para que tu única preocupación sea el día de inauguración de tu espacio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-desktop"></i>
+                                <h5 class="card-title">ALTÍSIMA CALIDAD</h5>
+                                <p class="card-text">Nuestros EcoBox, están construidos y equipados con materiales de excelentísima calidad, los cuales puedes comprobar en nuestro Show Room
             margin-top: 15px;
         }
         /* Custom Component Styles */

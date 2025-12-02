@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoBox Home30 | Tu casa lista en 60 días</title>
+    <title>EcoBox | Tu casa lista en 60 días</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
         }
         .hero {
             position: relative;
-            background: url('https://placehold.co/1920x1080/007ACC/FFFFFF?text=EcoBox+Home30') no-repeat center center;
+            background: url('https://placehold.co/1920x1080/007ACC/FFFFFF?text=EcoBox') no-repeat center center;
             background-size: cover;
             color: white;
             padding: 180px 0;
@@ -279,6 +279,18 @@
         .accordion-clean .accordion-button:focus {
             box-shadow: none;
         }
+        /* Promise Section */
+        .promise-card {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .promise-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -293,19 +305,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#nuestras-ventajas">Ventajas</a>
+                        <a class="nav-link" href="#nuestra-promesa">Promesa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#beneficios">Beneficios</a>
+                        <a class="nav-link" href="#nuestras-ventajas">Ventajas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#modelos">Modelos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#faq">Preguntas Frecuentes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ref3-premium">Galería</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
@@ -318,32 +327,44 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container">
-            <h1>EcoBox Home30</h1>
+            <h1>EcoBox Viviendas</h1>
             <p class="lead">Tu casa lista en 60 días. Compacta, cómoda, ampliable y con diseño.</p>
         </div>
     </header>
 
     <main>
-        <!-- Resumen del Proyecto -->
-        <section id="resumen-proyecto">
+        <!-- Nuestra Promesa -->
+        <section id="nuestra-promesa">
             <div class="container">
-                <h2>Resumen Ejecutivo</h2>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <p class="lead">El mercado argentino de viviendas modulares tipo contenedor se encuentra en una etapa de crecimiento sostenido, impulsado por la necesidad de soluciones rápidas, costos competitivos y una tendencia hacia la sustentabilidad.</p>
-                        <h5>Drivers Clave del Mercado:</h5>
-                        <ul class="list-unstyled">
-                            <li><strong>Tiempos de Entrega Reducidos:</strong> 45–90 días vs. 8–14 meses de la obra tradicional.</li>
-                            <li><strong>Costo Competitivo:</strong> Aproximadamente USD 500–700/m².</li>
-                            <li><strong>Modularidad y Escalabilidad:</strong> Permite ampliaciones futuras sin obra húmeda.</li>
-                            <li><strong>Sustentabilidad:</strong> Uso de contenedores reciclados y menor huella de obra.</li>
-                        </ul>
+                <h2>No vendemos contenedores, ofrecemos un nuevo comienzo</h2>
+                <div class="row text-center">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="promise-card h-100">
+                            <i class="fas fa-clock"></i>
+                            <h5>Tranquilidad</h5>
+                            <p>La certeza de que en 60 días podés mudarte a tu nuevo espacio, sin el estrés de una obra tradicional.</p>
+                        </div>
                     </div>
-                </div>
-                <h2 class="mt-5 pt-5">Situación Actual</h2>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <p>Somos una empresa líder en fabricación de contenedores de obra, con base en Neuquén y 80 empleados. Evaluando el fuerte crecimiento en la demanda habitacional, los altos precios de la construcción tradicional y la urgencia del mercado, se planteó la creación de una nueva línea productiva para módulos habitacionales.</p>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="promise-card h-100">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <h5>Seguridad Económica</h5>
+                            <p>Un precio cerrado desde el inicio, para que planifiques tu inversión sin sorpresas ni sobrecostos.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="promise-card h-100">
+                            <i class="fas fa-couch"></i>
+                            <h5>Comodidad</h5>
+                            <p>Un interior con diseño inteligente y bien resuelto, con baño, cocina, dormitorio y estar listos para disfrutar.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="promise-card h-100">
+                            <i class="fas fa-layer-group"></i>
+                            <h5>Flexibilidad</h5>
+                            <p>La libertad de ampliar tu casa con nuevos módulos si tus necesidades cambian. Tu casa crece con vos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -376,32 +397,37 @@
                                     <div class="col-md-6">
                                         <h5>Fortalezas</h5>
                                         <ul>
-                                            <li>Empresa líder y Knowhow adquirido.</li>
-                                            <li>Proceso productivo industrializado con tiempos predecibles.</li>
+                                            <li>Know-how industrial previo en estructuras modulares.</li>
+                                            <li>Proceso productivo industrializado con plazos predecibles.</li>
                                             <li>Precio competitivo por m².</li>
-                                            <li>Modularidad que permite escalar unidades.</li>
-                                            <li>Transporte especializado propio.</li>
+                                            <li>Modularidad: tu casa crece con vos.</li>
+                                            <li>Baja complejidad de instalación en terreno.</li>
+                                            <li>Diseño y confort superiores al estereotipo.</li>
+                                            <li>Relación directa y postventa personalizada.</li>
                                         </ul>
                                         <h5>Debilidades</h5>
                                         <ul>
-                                            <li>Falta de fidelidad al nuevo producto.</li>
+                                            <li>Producto nuevo para el público residencial.</li>
                                             <li>Paradigmas sociales sobre viviendas alternativas.</li>
                                             <li>Dependencia de insumos dolarizados.</li>
+                                            <li>Capacidad productiva limitada en etapa inicial.</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
                                         <h5>Oportunidades</h5>
                                         <ul>
                                             <li>Alta demanda habitacional insatisfecha.</li>
-                                            <li>Aumento de loteos suburbanos y precios altos en alquileres.</li>
-                                            <li>Mercado con baja estandarización → oportunidad para liderazgo.</li>
-                                            <li>Acuerdos de exclusividad con empresas petroleras.</li>
+                                            <li>Crecimiento de loteos y segundas viviendas.</li>
+                                            <li>Aumento de precios de alquiler.</li>
+                                            <li>Mercado poco estandarizado: oportunidad para ser referentes.</li>
+                                            <li>Acuerdos con desarrolladores para ofrecer "lote + casa".</li>
                                         </ul>
                                         <h5>Amenazas</h5>
                                         <ul>
-                                            <li>Competencia creciente de prefabricados importados.</li>
-                                            <li>Normativa no homogénea entre municipios.</li>
-                                            <li>Costos logísticos elevados en zonas limítrofes.</li>
+                                            <li>Competencia de otros sistemas prefabricados.</li>
+                                            <li>Oferentes informales o de baja calidad que dañan la imagen del sector.</li>
+                                            <li>Normativa municipal no homogénea.</li>
+                                            <li>Volatilidad macroeconómica (inflación, tipo de cambio).</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -417,212 +443,75 @@
             <div class="container">
                 <h2 class="text-center mb-5">Nuestras Ventajas Clave</h2>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card feature-card text-center p-4 h-100">
                             <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                <i class="fas fa-chair"></i>
-                                <h5 class="card-title">DISEÑOS PERSONALIZADOS</h5>
-                                <p class="card-text">Crea y diseña tu espacio, en EcoBox, te asesoramos para que crees tu propio espacio y visualices tu proyecto final, teniendo la posibilidad de ejecutar tu proyecto por etapas y con la posibilidad de seguir habitando el mismo, estando aún en obra.</p>
+                                <i class="fas fa-clock"></i>
+                                <h5 class="card-title">Construcción Rápida</h5>
+                                <p class="card-text">Reducción significativa del tiempo de construcción. Tu casa lista para mudarte en 60 días.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card feature-card text-center p-4 h-100">
                             <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                <i class="fas fa-key"></i>
-                                <h5 class="card-title">MODALIDAD LLAVE EN MANO</h5>
-                                <p class="card-text">Trabajamos bajo la modalidad llave en mano, para que tu única preocupación sea el día de inauguración de tu espacio.</p>
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <h5 class="card-title">Precio Cerrado y Ahorro</h5>
+                                <p class="card-text">Ofrecemos un precio cerrado desde el inicio, optimizando materiales y evitando sobrecostos.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card feature-card text-center p-4 h-100">
                             <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                <i class="fas fa-desktop"></i>
-                                <h5 class="card-title">ALTÍSIMA CALIDAD</h5>
-                                <p class="card-text">Nuestros EcoBox, están construidos y equipados con materiales de excelentísima calidad, los cuales puedes comprobar en nuestro Show Room.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card feature-card text-center p-4 h-100">
-                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                <i class="fas fa-stopwatch"></i>
-                                <h5 class="card-title">TIEMPO DE ENTREGA</h5>
-                                <p class="card-text">Tenemos un tiempo de entrega récord de 60 días para nuestra línea estándar, para que disfrutes tu nuevo espacio sin demoras.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card feature-card text-center p-4 h-100">
-                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                <i class="fas fa-wrench"></i>
-                                <h5 class="card-title">MANTENIMIENTO MÍNIMO</h5>
-                                <p class="card-text">Esta forma constructiva, tiene dentro de sus beneficios, el bajísimo costo de mantenimiento, el cual deriva de los tipos de materiales utilizados y la compacta estructura que lo forma.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card feature-card text-center p-4 h-100">
-                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                <i class="fas fa-award"></i>
-                                <h5 class="card-title">DURABILIDAD</h5>
-                                <p class="card-text">Respecto a la durabilidad estamos hablando de estructuras metálicas reforzadas, de alta resistencia que son adaptables a cualquier tipo de situación climática.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card feature-card text-center p-4 h-100">
-                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                <i class="fas fa-user-shield"></i>
-                                <h5 class="card-title">GARANTÍA DE 3 AÑOS</h5>
-                                <p class="card-text">Confiamos en nuestra calidad, por eso te ofrecemos una garantía extendida de 3 años en toda la estructura de tu EcoBox.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Beneficios -->
-        <section id="beneficios" class="bg-light">
-            <div class="container">
-                <h2>Beneficios Clave</h2>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card text-center p-3 h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Rapidez</h5>
-                                <p class="card-text">Tiempos de entrega muy inferiores a la obra tradicional. Tu casa lista en 60 días.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card text-center p-3 h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Precio Cerrado</h5>
-                                <p class="card-text">Olvídate de sorpresas. Ofrecemos un precio cerrado y previsible desde el inicio.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card text-center p-3 h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Ampliable</h5>
-                                <p class="card-text">Puedes empezar con un módulo y ampliar tu casa en etapas futuras. Tu casa crece con vos.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card text-center p-3 h-100">
-                            <div class="card-body">
+                                <i class="fas fa-couch"></i>
                                 <h5 class="card-title">Diseño y Confort</h5>
-                                <p class="card-text">Diseño interior moderno con excelente aislación térmica y acústica para tu comodidad.</p>
+                                <p class="card-text">Diseño interior moderno con excelente aislación térmica y acústica para tu comodidad todo el año.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card text-center p-3 h-100">
-                            <div class="card-body">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-check-circle"></i>
+                                <h5 class="card-title">Calidad Controlada</h5>
+                                <p class="card-text">La fabricación en un entorno controlado asegura alta precisión y un riguroso control de calidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-leaf"></i>
                                 <h5 class="card-title">Sustentable</h5>
-                                <p class="card-text">Reutilizamos contenedores marítimos en desuso, reduciendo el impacto ambiental y promoviendo la economía circular.</p>
+                                <p class="card-text">Reutilizamos contenedores, reducimos el impacto ambiental y promovemos la economía circular.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card text-center p-3 h-100">
-                            <div class="card-body">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <h5 class="card-title">Ampliable y Flexible</h5>
+                                <p class="card-text">Tu casa crece con vos. Empezá con un módulo y amplía tu casa en el futuro según tus necesidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-truck-moving"></i>
                                 <h5 class="card-title">Transportable</h5>
-                                <p class="card-text">Si en el futuro decides mudarte, tu casa puede mudarse contigo. Una inversión que te acompaña.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card text-center p-3 h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Seguridad</h5>
-                                <p class="card-text">Construidas sobre una estructura metálica reforzada, nuestras viviendas ofrecen una seguridad y durabilidad superior.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Características Principales -->
-        <section id="caracteristicas">
-            <div class="container">
-                <h2>Ventajas de la Construcción Modular</h2>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body d-flex flex-column justify-content-center">
-                                <i class="fas fa-clock fa-3x mb-3"></i>
-                                <h5 class="card-title">CONSTRUCCION RAPIDA</h5>
-                                <p class="card-text small">Reducción significativa del tiempo de construcción comparado con las casas tradicionales.</p>
+                                <p class="card-text">Si en el futuro decidís mudarte, tu casa puede mudarse contigo. Una inversión que te acompaña.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body d-flex flex-column justify-content-center">
-                                <i class="fas fa-check-circle fa-3x mb-3"></i>
-                                <h5 class="card-title">CALIDAD CONTROLADA</h5>
-                                <p class="card-text small">Entorno de fabricación controlado que asegura alta precisión y un riguroso control de calidad.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body d-flex flex-column justify-content-center">
-                                <i class="fas fa-hand-holding-usd fa-3x mb-3"></i>
-                                <h5 class="card-title">AHORRO DE COSTOS</h5>
-                                <p class="card-text small">Optimización de materiales y reducción de desperdicios.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body d-flex flex-column justify-content-center">
-                                <i class="fas fa-truck-moving fa-3x mb-3"></i>
-                                <h5 class="card-title">TRASLADABLES</h5>
-                                <p class="card-text small">Se fabrican en taller y se trasladan terminadas a cualquier sitio del país.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body d-flex flex-column justify-content-center">
-                                <i class="fas fa-leaf fa-3x mb-3"></i>
-                                <h5 class="card-title">SOSTENIBILIDAD</h5>
-                                <p class="card-text small">Diseño energéticamente eficiente y materiales que minimizan el impacto ambiental.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body d-flex flex-column justify-content-center">
-                                <i class="fas fa-calendar-check fa-3x mb-3"></i>
-                                <h5 class="card-title">ENTREGA PACTADA</h5>
-                                <p class="card-text small">Mayor previsibilidad en los plazos de entrega y costos, evitando sorpresas y sobrecostos.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body d-flex flex-column justify-content-center">
-                                <i class="fas fa-shield-alt fa-3x mb-3"></i>
-                                <h5 class="card-title">DURABILIDAD</h5>
-                                <p class="card-text small">Estructuras metálicas reforzadas diseñadas para soportar condiciones climáticas adversas y el uso habitual.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="card text-center h-100">
-                            <div class="card-body d-flex flex-column justify-content-center">
-                                <i class="fas fa-lightbulb fa-3x mb-3"></i>
-                                <h5 class="card-title">DISEÑO FLEXIBLE</h5>
-                                <p class="card-text small">Posibilidad de personalización según las necesidades y preferencias del cliente.</p>
+                        <div class="card feature-card text-center p-4 h-100">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <i class="fas fa-shield-alt"></i>
+                                <h5 class="card-title">Seguridad y Durabilidad</h5>
+                                <p class="card-text">Estructura metálica reforzada que ofrece una seguridad y durabilidad superior en cualquier clima.</p>
                             </div>
                         </div>
                     </div>
@@ -830,112 +719,6 @@
             </div>
         </section>
 
-        <!-- Plan de Negocio -->
-        <section id="plan-negocio" class="bg-light">
-            <div class="container">
-                <h2>Plan de Negocio</h2>
-                <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                        <ul class="nav nav-pills justify-content-center flex-wrap gap-2 mb-4" id="businessPlanTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="plan-marketing-tab" data-bs-toggle="tab" data-bs-target="#plan-marketing-content" type="button" role="tab" aria-controls="plan-marketing-content" aria-selected="true">Marketing</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="plan-sales-tab" data-bs-toggle="tab" data-bs-target="#plan-sales-content" type="button" role="tab" aria-controls="plan-sales-content" aria-selected="false">Ventas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="plan-profit-tab" data-bs-toggle="tab" data-bs-target="#plan-profit-content" type="button" role="tab" aria-controls="plan-profit-content" aria-selected="false">Rentabilidad</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="plan-launch-tab" data-bs-toggle="tab" data-bs-target="#plan-launch-content" type="button" role="tab" aria-controls="plan-launch-content" aria-selected="false">Lanzamiento</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="businessPlanTabsContent">
-                            <div class="tab-pane fade show active p-3" id="plan-marketing-content" role="tabpanel" aria-labelledby="plan-marketing-tab">
-                                <h5>4.1 Producto</h5>
-                                <ul>
-                                    <li>Línea estándar: “Container Living 30”.</li>
-                                    <li>Servicios asociados: instalación, fundaciones, trámites municipales, transporte, garantía de 3 años.</li>
-                                </ul>
-                                <h5>4.2 Precio</h5>
-                                <ul>
-                                    <li><strong>Estrategia:</strong> penetración selectiva orientada a capturar volumen con un precio competitivo pero con margen adecuado.</li>
-                                    <li><strong>Costo técnico estimado:</strong> USD 18.000–20.000.</li>
-                                    <li><strong>Precio de venta sugerido:</strong> USD 28.000 (margen bruto ~35%).</li>
-                                    <li><strong>Modelo Premium:</strong> USD 35.000.</li>
-                                    <li><strong>Financiamiento:</strong> 30% anticipo + 70% en hitos. Alianzas con fintech para cuotas en pesos ajustadas mensualmente.</li>
-                                </ul>
-                                <h5>4.3 Plaza (Distribución)</h5>
-                                <ul>
-                                    <li>Venta directa (principal).</li>
-                                    <li>Red de representantes en zonas turísticas.</li>
-                                    <li>Alianzas con desarrollos inmobiliarios suburbanos.</li>
-                                    <li>Presencia en marketplaces para modelos estándar.</li>
-                                </ul>
-                                <h5>4.4 Promoción</h5>
-                                <ul>
-                                    <li><strong>Ejes de comunicación:</strong> Rapidez (“Listo para habitar en 60 días”), Sustentabilidad, Modularidad (“Tu casa crece con vos”), Seguridad.</li>
-                                    <li><strong>Canales:</strong> Campañas digitales (Meta, Google), Visitas a planta y showroom, Ferias de construcción y turismo, Influencers.</li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade p-3" id="plan-sales-content" role="tabpanel" aria-labelledby="plan-sales-tab">
-                                <h6>Supuestos:</h6>
-                                <ul>
-                                    <li>Crecimiento anual de mercado: 15%.</li>
-                                    <li>Participación objetivo: 0,1% en año 1 → 0,4% en año 5.</li>
-                                    <li>Capacidad productiva inicial: 10 unidades/mes (120/año).</li>
-                                    <li>Se venden modelos estándar (70%) y premium (30%).</li>
-                                </ul>
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr><th>Año</th><th>Unidades</th><th>Precio promedio</th><th>Ingresos estimados</th></tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr><td>1</td><td>60</td><td>USD 29.500</td><td>USD 1.77 M</td></tr>
-                                        <tr><td>2</td><td>90</td><td>USD 30.000</td><td>USD 2.70 M</td></tr>
-                                        <tr><td>3</td><td>140</td><td>USD 30.500</td><td>USD 4.27 M</td></tr>
-                                        <tr><td>4</td><td>180</td><td>USD 31.000</td><td>USD 5.58 M</td></tr>
-                                        <tr><td>5</td><td>220</td><td>USD 31.500</td><td>USD 6.93 M</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="tab-pane fade p-3" id="plan-profit-content" role="tabpanel" aria-labelledby="plan-profit-tab">
-                                <h5>Costos estimados por unidad</h5>
-                                <ul>
-                                    <li>Materiales y mano de obra: USD 18.000</li>
-                                    <li>Transporte e instalación promedio: USD 1.500</li>
-                                    <li>Gastos comerciales: USD 800</li>
-                                    <li><strong>Costo total promedio: USD 20.300</strong></li>
-                                </ul>
-                                <h5>Margen</h5>
-                                <ul>
-                                    <li>Precio promedio: USD 29.500</li>
-                                    <li>Margen bruto por unidad: USD 9.200</li>
-                                    <li><strong>Margen bruto anual (Año 1): USD 552.000</strong></li>
-                                    <li><strong>Margen bruto anual (Año 5): USD 2.02 M</strong></li>
-                                </ul>
-                                <h5>Punto de equilibrio</h5>
-                                <p>Con costos fijos estimados de USD 300.000/año, el punto de equilibrio es de <strong>33 unidades anuales</strong>, objetivo alcanzado desde el mes 7 del año 1.</p>
-                            </div>
-                            <div class="tab-pane fade p-3" id="plan-launch-content" role="tabpanel" aria-labelledby="plan-launch-tab">
-                                <h5>Campaña de Lanzamiento</h5>
-                                <ul>
-                                    <li><strong>Concepto creativo:</strong> “Viví modular. Viví hoy.”</li>
-                                    <li><strong>Piezas:</strong> Video 45’’, simulador web, render 360°, testimonios.</li>
-                                    <li><strong>KPIs:</strong> Costo por lead objetivo: USD 5–7; Tasa de conversión final: 2–3%.</li>
-                                </ul>
-                                <h5>Canal de Distribución</h5>
-                                <ul>
-                                    <li><strong>Estrategia:</strong> Modelo híbrido con fuerte control de calidad y relación directa con el cliente.</li>
-                                    <li><strong>Canales clave:</strong> Venta directa, representantes regionales, alianzas B2B, e-commerce, showroom móvil.</li>
-                                    <li><strong>Logística:</strong> Transporte con camiones de cama baja, montaje con hidrogrúa, instalación rápida en 24–48 h.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section id="faq">
             <div class="container">
                 <h2>Preguntas Frecuentes</h2>
@@ -1030,117 +813,11 @@
 
     </main>
     
-    <!-- ================================================================================= -->
-    <!-- START REFERENCE CONTENT                                                           -->
-    <!-- ================================================================================= -->
-
-    <hr class="my-5 border-info border-5">
-
-    <!-- CONTENT FROM: Servicios – Mi Casa Containers.html -->
-    <div class="container my-5">
-        
-        <!-- Diseño y Calidad -->
-        <section id="ref3-diseno">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Diseño y Calidad</h2>
-                </div>
-                <div class="col-md-6">
-                    <p>Realizamos diferentes tipos de configuraciones para nuestros módulos habitacionales: 30m<sup>2</sup> en 2 ambientes, 60m<sup>2</sup> en 3 ambientes, 90m<sup>2</sup> en 4 ambientes y 120m<sup>2</sup> en 5 ambientes. Todos en versiones <strong>ESTÁNDAR</strong> y <strong>PREMIUM.</strong></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Estándar vs Premium -->
-        <section id="ref3-premium" class="bg-light">
-            <div class="text-center">
-                <h2>Estándar VS. Premium</h2>
-                <p class="lead">Contamos con muchas opciones para darle ese toque elegante a tu proyecto de vivienda. Trabajamos con materiales sintéticos o naturales que vamos adecuando de acuerdo a sus posibilidades.</p>
-            </div>
-            <div class="row text-center mt-4">
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/Interior-home-1.png" class="card-img-top" alt="Interior Entablonado">
-                        <div class="card-body">
-                            <h5 class="card-title">INTERIOR ENTABLONADO</h5>
-                            <p class="card-text">Posibilidad de optar entre materiales reales o sintéticos.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/Interior-home-2.png" class="card-img-top" alt="Interior Durlock">
-                        <div class="card-body">
-                            <h5 class="card-title">INTERIOR EN DURLOCK PINTADO</h5>
-                            <p class="card-text">Resaltá la elegancia de tu proyecto, eligiendo los colores que mejor se adapten a tu espacio.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/Interior-home-3.png" class="card-img-top" alt="Aberturas">
-                        <div class="card-body">
-                            <h5 class="card-title">ABERTURAS DE PRIMERA CALIDAD</h5>
-                            <p class="card-text">Estándar: Modena blanco. Premium: Modena 2 con DVH en color negro.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Módulos de Viviendas -->
-        <section id="ref3-viviendas">
-            <h2 class="text-center">...:: VIVIENDAS</h2>
-
-            <!-- Vivienda 30m -->
-            <div class="row align-items-center my-5">
-                <div class="col-md-6">
-                    <h3>Vivienda - 30 METROS (2 ambientes)</h3>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check"></i> Dormitorio.</li>
-                        <li><i class="fas fa-check"></i> Baño Completo.</li>
-                        <li><i class="fas fa-check"></i> Living.</li>
-                        <li><i class="fas fa-check"></i> Cocina / Comedor.</li>
-                    </ul>
-                    <small>*Adicional pérgola con deck.</small>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/render-30mt-marca-1280x853-1-768x512.png" class="img-fluid rounded shadow">
-                </div>
-            </div>
-
-            <!-- Vivienda 60m -->
-            <div class="row align-items-center my-5 bg-light py-4 rounded">
-                <div class="col-md-6">
-                     <img src="https://micasacontainers.com.ar/wp-content/uploads/2021/09/render-60mt-marca-1280x853-1-768x512.png" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6">
-                    <h3>Vivienda 2 - 60 METROS (3 ambientes)</h3>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check"></i> 2 Dormitorios.</li>
-                        <li><i class="fas fa-check"></i> Baño Completo.</li>
-                        <li><i class="fas fa-check"></i> Living.</li>
-                        <li><i class="fas fa-check"></i> Cocina.</li>
-                        <li><i class="fas fa-check"></i> Comedor.</li>
-                        <li><i class="fas fa-check"></i> Lavadero.</li>
-                    </ul>
-                    <small>*Adicional pérgola con deck.</small>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-
-    <!-- ================================================================================= -->
-    <!-- END REFERENCE CONTENT                                                             -->
-    <!-- ================================================================================= -->
-
     <!-- Contacto / Footer -->
     <footer id="contacto" class="footer">
         <div class="container text-center">
             <h2>Contáctanos</h2>
-            <p>¿Interesado en una EcoBox Home30? ¡Hablemos!</p>
+            <p>¿Interesado en nuestras EcoBox Viviendas? ¡Hablemos!</p>
             <p><strong>Email:</strong> info@ecoboxviviendas.com</p>
             <p><strong>Teléfono:</strong> +54 9 2966509191</p>
             <p>Síguenos en nuestras redes sociales.</p>
